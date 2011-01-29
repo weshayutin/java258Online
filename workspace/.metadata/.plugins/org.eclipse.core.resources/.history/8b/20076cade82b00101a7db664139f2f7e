@@ -1,0 +1,21 @@
+<%@ page import="java.util.*" %>
+
+<html>
+<body>
+<h1 align="center">Beer Recommendations JSP</h1>
+<p>
+
+<%
+  // This is a java scriptlet where we get to write java code
+  // when we want to write html that will be inserted just use 'out'
+  List styles = (List)request.getAttribute("styles");
+  String body = (String)request.getAttribute("body");
+  String[] size = (String[])request.getAttribute("size");
+  Iterator it = styles.iterator();
+  while(it.hasNext()) {
+     out.print("<br>try: " + it.next());
+     }
+%>
+</body>
+</html>
+

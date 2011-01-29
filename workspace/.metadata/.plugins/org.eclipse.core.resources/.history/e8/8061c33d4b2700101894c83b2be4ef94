@@ -1,0 +1,23 @@
+package com.waketech.schedule;
+
+import java.util.List;
+
+public class FetchSchedule {
+	
+	 	public List FetchSchedule(String studentID){
+	 		
+	 		Course251 c251 = new Course251();
+	 		Course258 c258 = new Course258();
+	 		Course219 c219 = new Course219();
+	 		
+	 		Student myStudent = new Student(studentID);
+	 		if(myStudent.getID().equals("123456")){
+	 			myStudent.addCourse(c251);
+	 			myStudent.addCourse(c258);
+	 			myStudent.addCourse(c219);
+	 		}
+	 		
+	 		return myStudent.getCourseList();
+	 	}
+
+}

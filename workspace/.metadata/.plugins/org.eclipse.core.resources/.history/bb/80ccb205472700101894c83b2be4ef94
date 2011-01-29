@@ -1,0 +1,13 @@
+package com.waketech.schedule;
+
+public class CourseCSC251 {
+	
+	public  String courseID;
+	public  String courseName;
+	public  String meetingInfo;
+	
+	
+	
+	
+
+}

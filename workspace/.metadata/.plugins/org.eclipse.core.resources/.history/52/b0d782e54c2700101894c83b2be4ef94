@@ -1,0 +1,15 @@
+package com.waketech.schedule;
+
+import java.util.List;
+
+public class FetchSchedule {
+	
+	 	public List FetchSchedule(String studentID){
+	 		
+	 		String[] s123456 = 
+	 				{"CSC251","Advanced Java","Wed 5:00PM – 9:00 PM PLM 326"};
+	 		
+	 		
+	 	}
+
+}

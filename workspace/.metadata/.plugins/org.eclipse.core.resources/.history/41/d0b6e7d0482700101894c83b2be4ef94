@@ -1,0 +1,23 @@
+package com.waketech.schedule;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Student {
+	
+	String id;
+	List<Course> courseList = new ArrayList<Course>();
+	
+	public Student(String id){
+		this.id = id;
+	}
+	
+	public void addCourse(Course c){
+		courseList.add(c);
+	}
+	
+	public List<Course> getCourseList(){
+		return courseList;
+	}
+
+}

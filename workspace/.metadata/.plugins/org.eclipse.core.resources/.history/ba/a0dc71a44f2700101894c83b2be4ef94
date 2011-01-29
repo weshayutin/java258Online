@@ -1,0 +1,33 @@
+package com.waketech.schedule;
+
+import java.util.List;
+
+public class FetchSchedule {
+	
+	 	public String[][] FetchSchedule(String studentID){
+	 		
+	 		String[][] s123456 =
+	 		{ {"CSC251","Advanced Java","Wed 5:00PM – 9:00 PM PLM 326"},
+	 		  {"CSC258","Java EE","Mon 5:00PM – 9:00 PM PLM 325"},
+	 		  {"ENG219","Neat Books","M, W, F 3:00PM – 4:00PM MSB355"} };
+	 		
+	 		String[][] s234567 =
+	 		{ {"CSC251","Advanced Java","Wed 5:00PM – 9:00 PM PLM 326"},
+	 		  {"CSC258","Java EE","Mon 5:00PM – 9:00 PM PLM 325"},
+	 		  {"ENG001","Pre Books","M, W, F 3:00PM – 4:00PM MSB316"} };
+	 		
+	 		String[][] s345678 = 
+	 		{ {"CSC134","C++","Wed 5:00PM – 9:00 PM PLM 306"},
+	 		  {"CSC234","Adv C++","Mon 5:00PM – 9:00 PM PLM 306"} };
+	 		
+	 		if(studentID.equals("123456")) return s123456;
+	 		if(studentID.equals("234567")) return s234567;
+	 		if(studentID.equals("345678")) return s345678;
+	 		
+	 		
+	 		return s123456;
+	 	}
+	 		
+	 	
+	 	
+}

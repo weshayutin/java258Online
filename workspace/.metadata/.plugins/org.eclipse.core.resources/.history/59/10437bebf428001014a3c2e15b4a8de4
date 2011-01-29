@@ -1,0 +1,10 @@
+import javax.servlet.http.HttpServletRequest;
+
+
+public class ServletDump {
+	
+	public void dumpRequest(HttpServletRequest request){
+		
+	}
+
+}

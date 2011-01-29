@@ -1,0 +1,7 @@
+INDEX VERSION 1.126
+/home/whayutin/java258/workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1313409737.index
+/BeerApp
+/home/whayutin/java258/workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2650393568.index
+/Week2Assignment
+/home/whayutin/java258/workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2249167487.index
+/Week2BeerApp

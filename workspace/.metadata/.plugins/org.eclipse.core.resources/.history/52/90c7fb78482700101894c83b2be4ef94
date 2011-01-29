@@ -1,0 +1,9 @@
+package com.waketech.schedule;
+
+public class FetchSchedule {
+	
+	 	public List FetchSchedule(String studentID){
+	 		Student myStudent = Student(studentID);
+	 	}
+
+}

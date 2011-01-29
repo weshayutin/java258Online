@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Download Selection Page</title>
+</head>
+<body>
+<center>
+<h1 align="center">Download Selection Page</h1>
+<br>
+<hr/>
+<br>
+<form method="POST" action="DumpServlet.do">
+Select document to download
+<br><br>
+Color:
+<select>
+<option>violet-0.16a.jar</option>
+<option>Programming.doc</option>
+</select>
+
+
+	<br><br>
+	<input type="SUBMIT" name="file" value="Submit Query"/>
+</form>
+
+
+
+
+</center>
+
+</body>
+</html>

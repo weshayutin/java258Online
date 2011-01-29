@@ -1,0 +1,8 @@
+package com.waketech.schedule;
+
+public class Course258  extends Course{
+	 String courseID = "CSC258";
+     String courseName = "Java EE";
+	 String meetingInfo = "Mon 5:00PM – 9:00 PM PLM 325";
+
+}

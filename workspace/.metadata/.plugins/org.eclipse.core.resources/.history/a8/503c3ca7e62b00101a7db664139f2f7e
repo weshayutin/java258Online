@@ -1,0 +1,36 @@
+<html>
+<body>
+<h1 align="center">Beer Selection Page</h1>
+<form method="POST" action="SelectBeer.do">
+	Select beer characteristics<p>
+	Color:
+	<select name="color" size="1">
+	   <option>light
+	   <option>amber
+	   <option>brown
+	   <option>dark
+	</select>
+	<br><br>
+	Select beer body type<p>
+	Body:
+	<select name="body" size="1">
+	   <option>light
+	   <option>medium
+	   <option>heavy
+	</select>
+	<br><br>
+	Select beer size<p>
+	Size:
+	<select name="size" size="1">
+	   <option>12oz
+	   <option>16oz
+	   <option>22oz
+	</select>
+	<br><br>
+	
+	<center>
+	   <input type="SUBMIT">
+	</center>
+</form>
+</body>
+</html>
