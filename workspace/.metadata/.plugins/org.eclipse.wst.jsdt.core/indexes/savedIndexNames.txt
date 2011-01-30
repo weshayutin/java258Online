@@ -1,13 +1,2 @@
 INDEX VERSION 1.121+/home/whayutin/java258/workspace/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
-3775897098.index
-4058480107.index
-3374403672.index
-1942742224.index
-1926747338.index
-1466058741.index
-1525281949.index
-1348414013.index
-3464503796.index
-909200447.index
-2109488832.index
-507030749.index
+641067959.index

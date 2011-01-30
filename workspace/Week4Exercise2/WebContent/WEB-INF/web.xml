@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>Beer-v1</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <context-param>
+    <param-name>bookName</param-name>
+    <param-value>Head First Servlets and JSP</param-value>
+  </context-param>
+  <context-param>
+    <param-name>authorName</param-name>
+    <param-value>Basham, Sierra, and Bates</param-value>
+  </context-param>
+  <context-param>
+    <param-name>emailAddress</param-name>
+    <param-value>duke@wikedlysmart.com</param-value>
+  </context-param>
+  <listener>
+    <listener-class>com.example.web.MyContextListener</listener-class>
+  </listener>
+  <servlet>
+    <description></description>
+    <display-name>BeerSelect2</display-name>
+    <servlet-name>BeerSelect2</servlet-name>
+    <servlet-class>com.example.web.BeerSelect2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BeerSelect2</servlet-name>
+    <url-pattern>/BeerSelect2</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description>Ch3 Beer 3</description>
+    <display-name>BeerSelect3</display-name>
+    <servlet-name>BeerSelect3</servlet-name>
+    <servlet-class>com.example.web.BeerSelect2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BeerSelect3</servlet-name>
+    <url-pattern>/SelectBeer3.do</url-pattern>
+  </servlet-mapping>
+</web-app>

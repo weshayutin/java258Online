@@ -1,0 +1,27 @@
+package com.waketech.schedule;
+
+public class College {
+	
+	String collegeName;
+	String collegeURL;
+	String collegePhone;
+	
+	public College(String collegeName, String collegeURL, String collegePhone){
+		this.collegeName = collegeName;
+		this.collegeURL = collegeURL;
+		this.collegePhone = collegePhone;
+	}
+	
+	public String getCollegeName() {
+		return collegeName;
+	}
+	public String getCollegeURL() {
+		return collegeURL;
+	}
+	public String getCollegePhone() {
+		return collegePhone;
+	}
+	
+	
+
+}

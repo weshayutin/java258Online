@@ -1,0 +1,21 @@
+package edu.waketech.whayutin;
+
+import java.util.Enumeration;
+
+import javax.servlet.http.HttpServletRequest;
+
+public class ServletDumpGetHeaders {
+
+	HttpServletRequest hsr;
+	
+	
+	
+	public void dumpRequest(HttpServletRequest request){
+		Enumeration names = request.getHeaderNames();
+		while (names.hasMoreElements()){
+			String headerName = (String)names.nextElement();
+			System.out.println(headerName);
+		}
+	}
+
+}

@@ -54,7 +54,8 @@ public class DumpServlet extends HttpServlet {
 		os.flush();
 		os.close();
 		
-		
+		ServletDumpGetHeaders sd = new ServletDumpGetHeaders();
+		sd.dumpRequest(request);
 		
 	}
 

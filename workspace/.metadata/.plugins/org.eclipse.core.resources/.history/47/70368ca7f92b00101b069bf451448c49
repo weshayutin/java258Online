@@ -1,0 +1,17 @@
+package edu.waketech.whayutin;
+
+import javax.servlet.http.HttpServletRequest;
+
+public class ServletDumpGetHeaders {
+
+	HttpServletRequest hsr;
+	
+	public ServletDumpGetHeaders(HttpServletRequest request){
+		this.hsr = request;
+	}
+	
+	public void dumpRequest(HttpServletRequest request){
+		
+	}
+
+}
