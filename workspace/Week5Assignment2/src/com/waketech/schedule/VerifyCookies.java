@@ -1,0 +1,43 @@
+package com.waketech.schedule;
+
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpSession;
+
+public class VerifyCookies {
+	/**
+	 * I dont think this extra step ** should ** be neccessary
+	 * but I was getting cookies w/ called "myusername" that were NOT valid
+	 * @param cookies
+	 * @return
+	 */
+	public String verifyThisCookie(Cookie[] cookies,HttpSession session){
+		String name = "";
+		String sessionname = "";
+		UserTable users = new UserTable();
+		boolean verified = false;
+		
+		if(cookies == null) { return ""; }
+		
+		sessionname = (String)session.getAttribute("sessionname");
+			
+		
+		for(int i=0;i<cookies.length;i++){
+			Cookie cookie = cookies[i];
+			if(cookie.getName().equals("cookiename")){
+				name = cookie.getValue();
+				System.out.println("cookiename ="+name);
+				System.out.println("sessionname ="+sessionname);
+			}
+			
+			if(users.isUser(name)){
+				verified = true;
+				break;
+			}
+			
+		}
+		
+		if(verified) { return name; }
+		else { return ""; }
+	}
+
+}

@@ -1,0 +1,71 @@
+package com.waketech.web;
+
+import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.waketech.schedule.College;
+import com.waketech.schedule.FetchSchedule;
+
+/**
+ * Servlet implementation class Schedule
+ */
+public class Schedule extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public Schedule() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("schedule.do");
+		boolean authenticated = false;
+		String name = "";
+		String[][] result = null;
+		Cookie[] cookies = request.getCookies();
+		for(int i=0;i<cookies.length;i++){
+			Cookie cookie = cookies[i];
+			if(cookie.getName().equals("name"));
+			name = cookie.getValue();
+			authenticated = true;
+		}
+		if(!authenticated){
+			String myRefferingPage = "Reffering Page ="+request.getHeader("Referer");
+			System.out.println(myRefferingPage);
+			request.setAttribute("myRefferringPage", "Login Failed");
+			RequestDispatcher view =  request.getRequestDispatcher("login.jsp");
+			view.forward(request,response);
+		}
+		else{
+			FetchSchedule studentSchedule = new FetchSchedule();
+			result = studentSchedule.getSchedule(name);
+			College myCollege = (College)getServletContext().getAttribute("college");
+			request.setAttribute("college", myCollege);
+			String lastAddDate = getServletConfig().getInitParameter("lastAddDate");
+			request.setAttribute("lastAddDate", lastAddDate);
+			request.setAttribute("styles", result);
+			RequestDispatcher view =    request.getRequestDispatcher("result.jsp");
+			view.forward(request,response);
+		}
+	}
+
+}

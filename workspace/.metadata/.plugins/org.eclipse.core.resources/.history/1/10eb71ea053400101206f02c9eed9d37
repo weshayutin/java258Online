@@ -1,0 +1,27 @@
+package com.waketech.schedule;
+
+import javax.servlet.http.Cookie;
+
+public class VerifyCookies {
+	
+	public String verifyThisCookie(Cookie[] cookies){
+		String name = "";
+		UserTable users = new UserTable();
+		boolean verified = false;
+		for(int i=0;i<cookies.length;i++){
+			Cookie cookie = cookies[i];
+			if(cookie.getName().equals("myusername"));
+			name = cookie.getValue();
+			System.out.println("cookiename ="+name);
+			if(users.isUser(name)){
+				//not sure why but I'm getting random cookies here.. that have name = myusername
+				verified = true;
+				break;
+			}
+		}
+		
+		if(verified) { return name; }
+		else { return null }
+	}
+
+}

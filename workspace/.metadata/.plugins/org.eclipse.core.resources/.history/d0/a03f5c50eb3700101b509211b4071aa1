@@ -1,0 +1,111 @@
+package com.waketech.web;
+
+import java.io.IOException;
+import java.net.URL;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import com.waketech.schedule.College;
+import com.waketech.schedule.FetchSchedule;
+import com.waketech.schedule.UserTable;
+import com.waketech.schedule.VerifyCookies;
+
+/**
+ * Servlet implementation class UserValidate
+ */
+public class UserValidate extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public UserValidate() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		HttpSession session = request.getSession();
+		Cookie cookie;
+		String myPage = request.getParameter("mypage");
+		System.out.println("myPage ="+myPage);
+		
+		String url =  new URL(request.getHeader("Referer")).getPath();
+		System.out.println("url ="+url);
+		String[] referer = url.split("/",-1);		
+		System.out.println("Referer ="+referer[2]);
+		System.out.println("session page ="+session.getAttribute("page"));
+		
+		
+		
+		String name = request.getParameter("name");
+		String password = request.getParameter("password");
+		UserTable ut = new UserTable();
+		String[][] result = null;
+		
+		VerifyCookies verify = new VerifyCookies();
+		String cn = verify.verifyThisCookie(cookie, session);
+
+		if(!ut.authenticateStudenID(name, password)){
+			//response.addHeader("message", "Login Failed");
+			//response.setHeader("message2", "Login Failed2");
+			request.setAttribute("message", "Login Failed");
+			RequestDispatcher view =    request.getRequestDispatcher("login.jsp");
+			view.forward(request,response);
+			session.setAttribute("page", myPage);
+		}
+	
+		else{
+			//trying out plain sessions and cookies here
+			System.out.println("session page = "+ session.getAttribute("page"));
+			session.setAttribute("sessionname", name);
+			
+			cookie = new Cookie("cookiename",name);
+			response.addCookie(cookie);
+			
+			if(session.getAttribute("page").equals("schedule")){
+				FetchSchedule studentSchedule = new FetchSchedule();
+				result = studentSchedule.getSchedule(name);
+				College myCollege = (College)getServletContext().getAttribute("college");
+				request.setAttribute("college", myCollege);
+				String lastAddDate = getServletConfig().getInitParameter("lastAddDate");
+				request.setAttribute("lastAddDate", lastAddDate);
+				request.setAttribute("styles", result);
+				RequestDispatcher view =    request.getRequestDispatcher("result.jsp");
+				view.forward(request,response);
+			}
+			else if(session.getAttribute("page").equals("classcriteria")){
+				RequestDispatcher view =    request.getRequestDispatcher("classcriteria.jsp");
+				view.forward(request,response);
+			}
+			else if(session.getAttribute("page").equals("classdisplay")){
+				RequestDispatcher view =    request.getRequestDispatcher("classdisplay.jsp");
+				view.forward(request,response);
+			}
+			else{
+				RequestDispatcher view =    request.getRequestDispatcher("menu.jsp");
+				view.forward(request,response);
+			}
+			
+		}
+		
+		
+	}
+
+}

@@ -1,0 +1,28 @@
+<%@ page import="com.waketech.whayutin.*"%>
+<html>
+<head>
+<title>Display Headers to JSP</title>
+</head>
+<body>  
+<form> 
+<%    // begin java scriptlet
+      // note out and session objects are valid in JSPs
+      out.print("Headers : <br>");
+      String text =HeaderReader.getRequestHeaders(request);
+      out.println(text);
+      out.print("<br>Creating or getting a session<br>");
+            if (session.isNew())
+         out.print("New Session<br>");
+      else
+         out.print("Existing Session " + session.getId() + "<br>");
+      
+      String url = response.encodeURL("HeaderDisplay.jsp"); 
+      out.print("<form method=GET action=" + url + ">");
+%>
+
+	<center>
+	   <input type="SUBMIT">
+	</center>
+</form>
+</body>
+</html>
