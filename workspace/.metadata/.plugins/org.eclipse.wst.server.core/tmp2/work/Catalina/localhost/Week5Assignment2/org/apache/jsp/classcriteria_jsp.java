@@ -59,6 +59,14 @@ public final class classcriteria_jsp extends org.apache.jasper.runtime.HttpJspBa
       out.write("</head>\n");
       out.write("<body>\n");
       out.write("\n");
+
+    String URI = request.getRequestURI();
+    session.setAttribute("page",URI);
+    out.println("<br><b> URI= "+URI+"</b><br>");
+    out.println("page ="+session.getAttribute("page"));
+
+      out.write("\n");
+      out.write("\n");
       out.write("<h1 align=\"center\"> Pick your criteria</h1>\n");
       out.write("<br><br><br>\n");
       out.write("<form action=\"criteria.do\" name =\"criteria\" method=\"POST\">\n");

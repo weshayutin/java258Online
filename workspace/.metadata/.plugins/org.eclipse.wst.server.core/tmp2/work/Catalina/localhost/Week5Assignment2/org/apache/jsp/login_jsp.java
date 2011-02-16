@@ -66,14 +66,9 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
     else{
 		out.println("<br><b>"+message+"</b><br>");
     }
-    
-    String myRefferingPage = (String)session.getAttribute("page");
-    if(myRefferingPage == null){
-    }
-    else{
-		out.println("<br><b>"+myRefferingPage+"</b><br>");
-		response.addHeader("page",myRefferingPage);
-    }
+
+    String URI = (String)session.getAttribute("page");
+    out.println("<br><b> URI= "+URI+"</b><br>");
 	
 
 
@@ -87,6 +82,7 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\n");
       out.write("\t <input type=\"SUBMIT\" value=\"Log In\"/>\n");
       out.write("</form>\n");
+      out.write("\n");
       out.write("</body>\n");
       out.write("</html>");
     } catch (Throwable t) {

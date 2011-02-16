@@ -8,6 +8,13 @@
 </head>
 <body>
 
+<%
+    String URI = request.getRequestURI();
+    session.setAttribute("page",URI);
+    out.println("<br><b> URI= "+URI+"</b><br>");
+    out.println("page ="+session.getAttribute("page"));
+%>
+
 <h1 align="center"> Pick your criteria</h1>
 <br><br><br>
 <form action="criteria.do" name ="criteria" method="POST">

@@ -8,8 +8,13 @@
 <h1 align="center"> Welcome to WakeTech</h1>
 </head>
 <body>
+<%
+	
+   
+%>
+
 <br><br><br>
-<form method="post" action="ValidateUser.do">
+<form method="GET" action="ValidateUser.do">
  <select name=mypage>
   <option value="login">Login</option>
   <option value="classcriteria">Search By Criteria</option>

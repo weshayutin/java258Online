@@ -39,15 +39,17 @@
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <%
-String message = (String)request.getAttribute("lastAddDate");
+String message = (String)getServletConfig().getServletContext().getInitParameter("lastAddDate");
 out.print("<center>");
 out.print(message+"</center>");
+
 out.print("<br>");
 out.print(c.getCollegeAddress()+ " "+ c.getCollegePhone());
 out.print("</center>");
 
 
 %>
+<%=getInitParameter("lastAddDate")%>
 
 </body>
 </html>

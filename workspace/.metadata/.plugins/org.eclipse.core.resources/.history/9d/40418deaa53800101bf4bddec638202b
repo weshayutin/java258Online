@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="week6Excersise">
+        <property name="context-root" value="week6Excersise"/>
+    </wb-module>
+</project-modules>

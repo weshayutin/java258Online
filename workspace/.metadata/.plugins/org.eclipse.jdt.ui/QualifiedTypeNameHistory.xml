@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="com.waketech.schedule.Course"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="com.waketech.schedule.Course251"/>
 <fullyQualifiedTypeName name="com.waketech.schedule.Course258"/>
 <fullyQualifiedTypeName name="com.waketech.schedule.Course219"/>
@@ -19,14 +18,19 @@
 <fullyQualifiedTypeName name="edu.waketech.whayutin.ServletDumpGetHeaders"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
 <fullyQualifiedTypeName name="java.util.Iterator"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="com.example.model.BeerExpert2"/>
 <fullyQualifiedTypeName name="javax.servlet.ServletContextListener"/>
-<fullyQualifiedTypeName name="com.waketech.schedule.College"/>
 <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
 <fullyQualifiedTypeName name="java.io.PrintWriter"/>
 <fullyQualifiedTypeName name="com.waketech.schedule.UserTable"/>
 <fullyQualifiedTypeName name="javax.servlet.http.Cookie"/>
-<fullyQualifiedTypeName name="com.waketech.schedule.VerifyCookies"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+<fullyQualifiedTypeName name="java.net.URL"/>
+<fullyQualifiedTypeName name="com.waketech.schedule.College"/>
+<fullyQualifiedTypeName name="com.waketech.schedule.VerifyCookies"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="edu.waketech.whayutin.HobbyExpert"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.LinkedList"/>
+<fullyQualifiedTypeName name="javax.swing.text.View"/>
 </qualifiedTypeNameHistroy>

@@ -14,14 +14,9 @@
     else{
 		out.println("<br><b>"+message+"</b><br>");
     }
-    
-    String myRefferingPage = (String)session.getAttribute("page");
-    if(myRefferingPage == null){
-    }
-    else{
-		out.println("<br><b>"+myRefferingPage+"</b><br>");
-		response.addHeader("page",myRefferingPage);
-    }
+
+    String URI = (String)session.getAttribute("page");
+    out.println("<br><b> URI= "+URI+"</b><br>");
 	
 
 %>
@@ -34,5 +29,6 @@
 	
 	 <input type="SUBMIT" value="Log In"/>
 </form>
+
 </body>
 </html>

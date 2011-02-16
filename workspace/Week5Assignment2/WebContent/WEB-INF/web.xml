@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
-  <display-name>Week4Assignment</display-name>
+  <display-name>Week5Assignment</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
@@ -51,5 +51,25 @@
   <servlet-mapping>
     <servlet-name>Criteria</servlet-name>
     <url-pattern>/criteria.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Display</display-name>
+    <servlet-name>Display</servlet-name>
+    <servlet-class>com.waketech.web.Display</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Display</servlet-name>
+    <url-pattern>/display.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Schedule</display-name>
+    <servlet-name>Schedule</servlet-name>
+    <servlet-class>com.waketech.web.Schedule</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Schedule</servlet-name>
+    <url-pattern>/schedule.do</url-pattern>
   </servlet-mapping>
 </web-app>

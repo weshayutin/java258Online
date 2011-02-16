@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Waketech Schedule</title>
+</head>
+<body>
+<%
+    String URI = request.getRequestURI();
+    session.setAttribute("page",URI);
+    out.println("<br><b> URI= "+URI+"</b><br>");
+%>
+
+<h1 align="center"> Waketech Schedule</h1>
+<br>
+<hr/>
+<br>
+<center>
+
+
+
+<form action="ValidateUser.do" method="POST">
+	Student ID: <input type="text" name="name"/><br>
+	Password: <input type="password" name="password"/><br/><br/>
+	
+	 <input type="SUBMIT" value="Request Schedule"/>
+
+</form>
+</center>
+</body>
+</html>

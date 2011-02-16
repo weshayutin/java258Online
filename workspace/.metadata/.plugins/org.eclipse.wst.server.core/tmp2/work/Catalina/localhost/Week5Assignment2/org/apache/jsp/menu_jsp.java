@@ -59,8 +59,14 @@ public final class menu_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<h1 align=\"center\"> Welcome to WakeTech</h1>\n");
       out.write("</head>\n");
       out.write("<body>\n");
+
+	
+   
+
+      out.write("\n");
+      out.write("\n");
       out.write("<br><br><br>\n");
-      out.write("<form method=\"post\" action=\"ValidateUser.do\">\n");
+      out.write("<form method=\"GET\" action=\"ValidateUser.do\">\n");
       out.write(" <select name=mypage>\n");
       out.write("  <option value=\"login\">Login</option>\n");
       out.write("  <option value=\"classcriteria\">Search By Criteria</option>\n");
