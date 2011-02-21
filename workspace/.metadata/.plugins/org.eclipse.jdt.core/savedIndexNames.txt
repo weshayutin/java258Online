@@ -1,17 +1,5 @@
 INDEX VERSION 1.126+/home/whayutin/java258/workspace/.metadata/.plugins/org.eclipse.jdt.core
-1163598312.index
-1085721932.index
-763335628.index
-3163193691.index
-2370930152.index
-623490794.index
-4009500384.index
-377831367.index
-1892498361.index
-1432998421.index
-3151068556.index
-2044383051.index
-1324717929.index
 90567099.index
+3163193691.index
+1085721932.index
 148924693.index
-2846248906.index
