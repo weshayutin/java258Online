@@ -1,3 +1,5 @@
+<%@page import="com.sun.xml.internal.ws.api.WSService.InitParams"%>
+<%@page import="javax.jws.soap.InitParam"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -34,22 +36,21 @@
 		out.print("</center>");		
 	}
 	out.print("</table>");
-
 %>
+<%--this code really stinks :(    --%>
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<!-- Does the jsp have to be a servlet w/ a <jsp-file> tag for expressions to work??? -->
 <%
-String message = (String)getServletConfig().getServletContext().getInitParameter("lastAddDate");
-out.print("<center>");
-out.print(message+"</center>");
 
+out.print("<center>");
+out.print(request.getAttribute("lastAddDate"));
 out.print("<br>");
 out.print(c.getCollegeAddress()+ " "+ c.getCollegePhone());
 out.print("</center>");
 
 
 %>
-<%=getInitParameter("lastAddDate")%>
 
 </body>
 </html>

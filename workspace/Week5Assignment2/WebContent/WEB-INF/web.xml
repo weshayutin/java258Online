@@ -14,10 +14,6 @@
     <display-name>User Validate Servlet</display-name>
     <servlet-name>User Validate Servlet</servlet-name>
     <servlet-class>com.waketech.web.UserValidate</servlet-class>
-    <init-param>
-      <param-name>lastAddDate</param-name>
-      <param-value>The last date to add classes is Jan 16, 2010</param-value>
-    </init-param>
   </servlet>
   <servlet-mapping>
     <servlet-name>User Validate Servlet</servlet-name>
@@ -67,9 +63,14 @@
     <display-name>Schedule</display-name>
     <servlet-name>Schedule</servlet-name>
     <servlet-class>com.waketech.web.Schedule</servlet-class>
+    <init-param>
+    	<param-name>lastAddDate</param-name>
+    	<param-value>The last date to add classes is Jan 16, 2010</param-value>
+    </init-param>
   </servlet>
   <servlet-mapping>
     <servlet-name>Schedule</servlet-name>
     <url-pattern>/schedule.do</url-pattern>
+    
   </servlet-mapping>
 </web-app>

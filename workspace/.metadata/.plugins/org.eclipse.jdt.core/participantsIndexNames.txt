@@ -1,4 +1,6 @@
 INDEX VERSION 1.126
+/home/whayutin/java258/workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/222244871.index
+/Exam1
 /home/whayutin/java258/workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2249167487.index
 /Week2BeerApp
 /home/whayutin/java258/workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3280790779.index
@@ -7,17 +9,19 @@ INDEX VERSION 1.126
 /Week4Assignment
 /home/whayutin/java258/workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1313409737.index
 /BeerApp
-/home/whayutin/java258/workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2650393568.index
-/Week2Assignment
 /home/whayutin/java258/workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1324717929.index
 /Week5ExcersiceCookies
-/home/whayutin/java258/workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/90567099.index
-/Week5Assignment2
+/home/whayutin/java258/workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2650393568.index
+/Week2Assignment
 /home/whayutin/java258/workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/377831367.index
 /Week5ExcersiceHeaders
+/home/whayutin/java258/workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/90567099.index
+/Week5Assignment2
 /home/whayutin/java258/workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/763335628.index
 /week6Excersise
 /home/whayutin/java258/workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/4162909600.index
 /Week5Assignment
 /home/whayutin/java258/workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3021092363.index
 /Week4Exercise1
+/home/whayutin/java258/workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2917954140.index
+/Exam1

@@ -44,7 +44,7 @@ public class Schedule extends HttpServlet {
 		result = studentSchedule.getSchedule(name);
 		College myCollege = (College)getServletContext().getAttribute("college");
 		request.setAttribute("college", myCollege);
-		String lastAddDate = getServletConfig().getInitParameter("lastAddDate");
+		String lastAddDate = getInitParameter("lastAddDate");
 		request.setAttribute("lastAddDate", lastAddDate);
 		request.setAttribute("styles", result);
 		RequestDispatcher view =    request.getRequestDispatcher("result.jsp");

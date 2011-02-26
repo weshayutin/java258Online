@@ -1,0 +1,8 @@
+package edu.waketech.csc258.model;
+
+public class Song {
+	
+	private String songName;
+	private String singerName;
+
+}

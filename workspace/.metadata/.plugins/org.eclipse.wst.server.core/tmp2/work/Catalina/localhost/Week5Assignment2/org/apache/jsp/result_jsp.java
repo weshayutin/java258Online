@@ -3,6 +3,8 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import com.sun.xml.internal.ws.api.WSService.InitParams;
+import javax.jws.soap.InitParam;
 import java.util.*;
 import com.waketech.schedule.College;
 
@@ -53,6 +55,8 @@ public final class result_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_out = out;
 
       out.write("\n");
+      out.write("\n");
+      out.write("\n");
       out.write("<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n");
       out.write("\n");
       out.write("\n");
@@ -89,23 +93,21 @@ public final class result_jsp extends org.apache.jasper.runtime.HttpJspBase
 	}
 	out.print("</table>");
 
-
+      out.write('\n');
       out.write("\n");
       out.write("\n");
       out.write("<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>\n");
+      out.write("<!-- Does the jsp have to be a servlet w/ a <jsp-file> tag for expressions to work??? -->\n");
 
-String message = (String)getServletConfig().getServletContext().getInitParameter("lastAddDate");
+
 out.print("<center>");
-out.print(message+"</center>");
-
+out.print(request.getAttribute("lastAddDate"));
 out.print("<br>");
 out.print(c.getCollegeAddress()+ " "+ c.getCollegePhone());
 out.print("</center>");
 
 
 
-      out.write('\n');
-      out.print(getInitParameter("lastAddDate"));
       out.write("\n");
       out.write("\n");
       out.write("</body>\n");

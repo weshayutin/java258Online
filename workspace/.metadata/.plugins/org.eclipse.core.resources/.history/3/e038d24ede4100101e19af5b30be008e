@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Singer Selection</title>
+
+</head>
+<h1 align="center">Singer Selection</h1>
+<body>
+Please enter a song name to get the singer who sang it:
+<br><br>
+<form method="POST" action="singer.do">
+Enter a song name:
+<input type="text" name="songname"/>
+<br><br>
+<center>
+<input type="submit"/>
+</center>
+</form>
+
+</body>
+</html>

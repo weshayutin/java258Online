@@ -1,0 +1,5 @@
+package edu.waketech.csc258.model;
+
+public class Song {
+
+}
